@@ -1,0 +1,99 @@
+body {
+  background: #fbf4ff; /* light lavender like your screenshot */
+}
+
+:root {
+  --nav-purple: #5b4aa7; /* adjust if you want a different purple */
+}
+
+/* Top-right navigation container */
+.top-nav {
+  width: 95%;
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: flex-end;
+  gap: 28px;
+}
+
+/* Purple link + animated underline */
+.nav-link-animated {
+  position: relative;
+  text-decoration: none;
+  color: var(--nav-purple);
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 6px; /* gives space for underline */
+}
+
+/* The underline (initially hidden via scaleX(0)) */
+.nav-link-animated::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--nav-purple);
+
+  transform: scaleX(0);
+  transform-origin: left; /* underline grows from left to right */
+  transition: transform 220ms ease;
+}
+
+/* On hover, animate underline in */
+.nav-link-animated:hover::after,
+.nav-link-animated:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Optional: slightly darken text on hover */
+.nav-link-animated:hover,
+.nav-link-animated:focus-visible {
+  color: #4a3c92;
+}
+
+/* Keyboard accessibility */
+.nav-link-animated:focus-visible {
+  outline: none;
+}
+
+
+.about-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 56px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.about-img {
+  width: 90%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 28px;
+  display: block;
+}
+
+.company-logo {
+  height: 48px;   /* adjust as needed */
+  width: auto;
+}
+
+.company-name {
+  font-size: 28px;
+  font-weight: 650;
+}
+
+
+.about-title {
+  font-size: 44px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #2f2f2f;
+}
