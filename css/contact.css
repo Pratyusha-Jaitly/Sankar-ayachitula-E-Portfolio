@@ -1,0 +1,140 @@
+:root {
+  --page-bg: #fbf4ff;
+  --card-bg: #ffffff;
+  --nav-purple: #5b4aa7;
+  --nav-purple-hover: #4a3c92;
+  --text: #1e1e1e;
+  --muted: #555;
+  --radius-xl: 28px;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Top nav */
+.top-nav {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 28px;
+}
+
+.nav-link-animated {
+  position: relative;
+  text-decoration: none;
+  color: var(--nav-purple);
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 6px;
+}
+
+.nav-link-animated::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--nav-purple);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.nav-link-animated:hover::after,
+.nav-link-animated:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.nav-link-animated:hover,
+.nav-link-animated:focus-visible {
+  color: var(--nav-purple-hover);
+}
+
+.nav-link-animated.active {
+  color: var(--nav-purple-hover);
+}
+
+/* Contact card */
+.contact-card {
+  width: 95%;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+}
+
+.contact-title {
+  font-size: 44px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.contact-subtitle {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #2f2f2f;
+  max-width: 520px;
+}
+
+.contact-info {
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.info-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.info-label {
+  font-weight: 650;
+  color: #2f2f2f;
+  min-width: 80px;
+}
+
+.info-link {
+  color: var(--nav-purple);
+  text-decoration: none;
+}
+
+.info-link:hover {
+  text-decoration: underline;
+}
+
+.hint {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Form */
+.contact-form .form-label {
+  font-weight: 650;
+  color: #2f2f2f;
+}
+
+.send-btn {
+  background: var(--nav-purple);
+  border-color: var(--nav-purple);
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-weight: 650;
+}
+
+.send-btn:hover {
+  background: var(--nav-purple-hover);
+  border-color: var(--nav-purple-hover);
+}
+
+.form-status {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #2f2f2f;
+}
+

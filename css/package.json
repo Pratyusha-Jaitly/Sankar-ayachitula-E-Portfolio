@@ -1,0 +1,16 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website showcasing experience, education, projects, and contact information.",
+  "author": "Sankar Sudheer Ayachitula",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint js/**/*.js",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  }
+}

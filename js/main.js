@@ -1,19 +1,14 @@
-// Minimal JS: wire up the resume button.
-// Replace the URL with your real resume path when ready.
+// js/main.js
+import { byId } from "./lib/dom.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("downloadResumeBtn");
+export function initHomePage() {
+  const btn = byId("downloadResumeBtn");
   if (!btn) return;
 
   btn.addEventListener("click", () => {
-    // Option A: navigate to a PDF in your project (recommended)
-    // Example: put your PDF at: assets/Phani_Resume.pdf
     const resumeUrl = "assets/Resume.pdf";
-
-    // If you don't have the file yet, show a friendly message:
-    // alert("Add your resume file to assets/Resume.pdf and this will download it.");
-    // return;
-
     window.location.href = resumeUrl;
   });
-});
+}
+
+document.addEventListener("DOMContentLoaded", initHomePage);

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #fbf4ff; /* light lavender like your screenshot */
 }
@@ -97,3 +101,38 @@ body {
   line-height: 1.7;
   color: #2f2f2f;
 }
+
+.courses-line {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #2f2f2f;
+}
+
+.courses-label {
+  font-weight: 650;
+  margin-right: 8px;
+}
+
+.courses-list {
+  font-weight: 400;
+}
+
+.role-title {
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.cgpa-text {
+  font-size: 18px;      /* smaller than title */
+  font-weight: 500;
+  color: #555;
+  margin-left: 8px;     /* space from degree name */
+  white-space: nowrap; /* prevents line break */
+}
+
+.duration-text {
+  font-size: 14px;
+  color: #666;
+}
+
+
