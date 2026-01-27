@@ -13,14 +13,16 @@
   --radius-xl: 28px;
 }
 
-
 body {
   background: var(--page-bg);
   color: var(--text);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* Top nav */
+/* =========================
+   Top Navigation
+========================= */
+
 .top-nav {
   width: 95%;
   margin: 0 auto;
@@ -65,7 +67,10 @@ body {
   color: var(--nav-purple-hover);
 }
 
-/* Contact card */
+/* =========================
+   Contact Card
+========================= */
+
 .contact-card {
   width: 95%;
   margin: 0 auto;
@@ -119,23 +124,30 @@ body {
   line-height: 1.6;
 }
 
-/* Form */
+/* =========================
+   Form
+========================= */
+
 .contact-form .form-label {
   font-weight: 650;
   color: #2f2f2f;
 }
 
+/* ✅ UPDATED BUTTON STYLES */
 .send-btn {
-  background: var(--nav-purple);
-  border-color: var(--nav-purple);
+  background: black;
+  color: white;
+  border-color: black;
   border-radius: 999px;
   padding: 12px 22px;
   font-weight: 650;
 }
 
-.send-btn:hover {
-  background: var(--nav-purple-hover);
-  border-color: var(--nav-purple-hover);
+.send-btn:hover,
+.send-btn:focus-visible {
+  background: #111;
+  color: white;
+  border-color: #111;
 }
 
 .form-status {
@@ -143,4 +155,3 @@ body {
   font-size: 15px;
   color: #2f2f2f;
 }
-
