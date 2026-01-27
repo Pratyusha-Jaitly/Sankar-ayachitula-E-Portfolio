@@ -1,11 +1,24 @@
 # Personal Portfolio Website
 
-## Author
-Sankar Sudheer Ayachitula
+##  Author
 
-## Class Link
-CS 5610 – Web Development 
-Northeastern University – Khoury College of Computer Sciences  
+**Sankar Sudheer Ayachitula**  
+Graduate Student @ Northeastern University
+
+- 🌐 Homepage: [sankar-ayachitu.github.io](https://sankar-ayachitula.github.io/E-Portfolio/)
+- 💼 LinkedIn: [linkedin.com/in/sankar-sudheer-ayachitula](https://www.linkedin.com/in/sankar-sudheer-ayachitula)
+- 🐙 GitHub: [github.com/Sankar-Ayachitula](https://github.com/Sankar-Ayachitula)
+- 📧 Email: sankarayachitula@gmail.com
+
+## 📚 Class Reference
+
+This project was created as part of **CS 5610 - Web Development** at Northeastern University.
+
+Course Link: [CS 5610 Web Development](https://johnguerra.co/classes/webDevelopment_fall_2024/)
+
+##  Video Demonstration
+
+[Watch the demo video](https://youtu.be/8RjpW8W8Hdc?si=Gd7YgBBQZS-Z6m6X)
  
 
 ## Project Objective
@@ -21,8 +34,9 @@ The website showcases:
 
 The project emphasizes clean HTML semantics, organized CSS without `!important`, ES6 JavaScript modules, accessibility best practices, and W3C compliance.
 
-## Design Doc Link:
-Link: https://docs.google.com/document/d/1FnuTRspHGk91FZd3h7IX8rZAXQsndJb2ppMofhByaLw/edit?usp=sharing
+##  Design Document
+
+View the design document for this project: [Design_document.pdf](https://docs.google.com/document/d/1FnuTRspHGk91FZd3h7IX8rZAXQsndJb2ppMofhByaLw/edit?usp=sharing)
 
 
 ## Home Page:
@@ -109,3 +123,24 @@ Link: https://docs.google.com/document/d/1FnuTRspHGk91FZd3h7IX8rZAXQsndJb2ppMofh
    ```bash
    npm run lint
    ```
+
+##  GenAI Tools Usage
+
+This project utilized AI assistance in the following ways:
+
+| Tool | Version | Usage |
+|------|---------|-------|
+| Claude | Claude Opus 4.5 | README generation, code review suggestions |
+
+**Prompts Used:**
+- "Generate a README following these guidelines: [image of requirements]"
+- Provided full HTML, CSS, and JS code for context
+
+**How AI Assisted:**
+- Generated this README.md file structure and content
+- Helped ensure all required sections were included per class guidelines
+- Did NOT generate the core website HTML/CSS/JS code
+
+##  License
+
+This project is open source and available under the [MIT License](LICENSE).
