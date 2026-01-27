@@ -1,19 +1,29 @@
 import { footprints } from "./lib/footprints-data.js";
 
+let photosModal = null;
+
+function cleanupBackdrops() {
+  document.body.classList.remove("modal-open");
+  document.body.style.removeProperty("overflow");
+  document.body.style.removeProperty("padding-right");
+  document.querySelectorAll(".modal-backdrop").forEach((b) => b.remove());
+}
+
 function openPhotosModal({ heading, photos }) {
   const modalTitle = document.getElementById("modalTitle");
   const grid = document.getElementById("photosGrid");
+  const modalEl = document.getElementById("photosModal");
 
   modalTitle.textContent = heading;
   grid.innerHTML = "";
 
   if (!photos || photos.length === 0) {
-    grid.innerHTML = `<div class="col-12"><p class="mb-0">No photos added yet.</p></div>`;
+    grid.innerHTML =
+      '<div class="col-12"><p class="mb-0">No photos added yet.</p></div>';
   } else {
     for (const src of photos) {
       const col = document.createElement("div");
       col.className = "col-12 col-md-6";
-
       col.innerHTML = `
         <img
           src="${src}"
@@ -26,9 +36,9 @@ function openPhotosModal({ heading, photos }) {
     }
   }
 
-  const modalEl = document.getElementById("photosModal");
-  const modal = new bootstrap.Modal(modalEl);
-  modal.show();
+  // ✅ Reuse a single modal instance (prevents stuck backdrop)
+  photosModal = bootstrap.Modal.getOrCreateInstance(modalEl);
+  photosModal.show();
 }
 
 function initMap() {
@@ -61,7 +71,6 @@ function initMap() {
 
   // Optional: click anywhere on map to show nearest footprint
   map.on("click", (e) => {
-    // Find closest footprint
     let best = null;
     let bestDist = Infinity;
 
@@ -73,7 +82,6 @@ function initMap() {
       }
     }
 
-    // Only open if click is reasonably close to a footprint (e.g., within 400km)
     if (best && bestDist < 400_000) {
       openPhotosModal({
         heading: `${best.countryName} — ${best.title ?? ""}`.trim(),
@@ -81,6 +89,10 @@ function initMap() {
       });
     }
   });
+
+  // ✅ Cleanup any stuck backdrop when modal closes
+  const modalEl = document.getElementById("photosModal");
+  modalEl.addEventListener("hidden.bs.modal", cleanupBackdrops);
 }
 
 document.addEventListener("DOMContentLoaded", initMap);
