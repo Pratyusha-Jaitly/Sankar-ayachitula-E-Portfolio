@@ -1,8 +1,8 @@
 :root {
-  --page-bg: #fbf4ff;
+  --page-bg: black;
   --card-bg: #ffffff;
-  --purple: #5b4aa7;
-  --purple-hover: #4a3c92;
+  --purple: white;
+  --purple-hover: white;
   --radius-xl: 28px;
 }
 

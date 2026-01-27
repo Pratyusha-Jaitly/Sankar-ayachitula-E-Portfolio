@@ -1,12 +1,18 @@
 :root {
-  --page-bg: #fbf4ff;
+  --page-bg: black;
   --card-bg: #ffffff;
-  --nav-purple: #5b4aa7;
-  --nav-purple-hover: #4a3c92;
+
+  --nav-purple: white;
+  --nav-purple-hover: white;
+
+  --info-purple: #5b4aa7;
+  --info-purple-hover: #4a3c92;
+
   --text: #1e1e1e;
   --muted: #555;
   --radius-xl: 28px;
 }
+
 
 body {
   background: var(--page-bg);
@@ -99,7 +105,7 @@ body {
 }
 
 .info-link {
-  color: var(--nav-purple);
+  color: var(--info-purple);
   text-decoration: none;
 }
 
