@@ -75,3 +75,37 @@ Link: https://docs.google.com/document/d/1FnuTRspHGk91FZd3h7IX8rZAXQsndJb2ppMofh
 │       └── in/
 ├── package.json
 └── LICENSE
+```
+
+## Instructions to Build and Run
+
+1. Clone the repository
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
+
+2. Install project dependencies
+
+   ```bash
+   npm install
+   ```
+
+3. Start a local HTTP server
+   (Required to support ES6 modules)
+
+   ```bash
+   npx http-server .
+   ```
+
+4. Open the project in a browser
+
+   * Home page: `http://localhost:8080/index.html`
+   * Contact page: `http://localhost:8080/pages/contact.html`
+   * Footprints page: `http://localhost:8080/pages/footprints.html`
+
+5. (Optional) Run code linting
+
+   ```bash
+   npm run lint
+   ```
