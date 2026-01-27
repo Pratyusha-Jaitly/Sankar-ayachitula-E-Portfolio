@@ -24,9 +24,8 @@
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     />
 
-        <!-- Leaflet JS -->
+    <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <link rel="stylesheet" href="../css/footprints.css" />
     <script type="module" src="../js/footprints.js"></script>
@@ -41,23 +40,40 @@
 
     <main class="container-fluid mt-3 mb-5">
       <section class="footprints-card">
-        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+        <div
+          class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
           <h1 class="page-title mb-0">Footprints</h1>
           <div class="hint-text">Click a dot (or country) to see photos.</div>
         </div>
 
-        <div id="map" class="map-shell" aria-label="World map"></div>
+        <!-- ✅ Added role so aria-label is valid -->
+        <div id="map" class="map-shell" role="application" aria-label="World map"></div>
       </section>
     </main>
 
     <!-- Bootstrap Modal -->
-    <div class="modal fade" id="photosModal" tabindex="-1" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="photosModal"
+      tabindex="-1"
+      aria-hidden="true"
+      aria-labelledby="modalTitle"
+    >
       <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="modalTitle">Photos</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <!-- ✅ Changed h5 -> h2 to avoid skipping heading levels -->
+            <h2 class="modal-title fs-5 mb-0" id="modalTitle">Photos</h2>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
+
           <div class="modal-body">
             <div id="photosGrid" class="row g-3"></div>
           </div>
@@ -65,6 +81,7 @@
       </div>
     </div>
 
-
+    <!-- Bootstrap JS (kept at bottom) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
