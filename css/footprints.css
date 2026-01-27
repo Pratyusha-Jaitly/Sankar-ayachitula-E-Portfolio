@@ -27,6 +27,7 @@ body {
   font-size: 18px;
   padding-bottom: 6px;
 }
+
 .nav-link-animated::after {
   content: "";
   position: absolute;
@@ -39,10 +40,12 @@ body {
   transform-origin: left;
   transition: transform 220ms ease;
 }
+
 .nav-link-animated:hover::after,
 .nav-link-animated:focus-visible::after {
   transform: scaleX(1);
 }
+
 .nav-link-animated:hover,
 .nav-link-animated:focus-visible {
   color: var(--purple-hover);

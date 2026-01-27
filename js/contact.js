@@ -27,7 +27,7 @@ export function initContactPage() {
     const to = "ayachitula.s@northeastern.edu";
 
     const body =
-`Message:
+      `Message:
 ${message}
 
 Best regards,
