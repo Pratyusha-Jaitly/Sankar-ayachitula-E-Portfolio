@@ -1,0 +1,74 @@
+:root {
+  --page-bg: #fbf4ff;
+  --card-bg: #ffffff;
+  --purple: #5b4aa7;
+  --purple-hover: #4a3c92;
+  --radius-xl: 28px;
+}
+
+body {
+  background: var(--page-bg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.top-nav {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 28px;
+}
+
+.nav-link-animated {
+  position: relative;
+  text-decoration: none;
+  color: var(--purple);
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 6px;
+}
+.nav-link-animated::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--purple);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+.nav-link-animated:hover::after,
+.nav-link-animated:focus-visible::after {
+  transform: scaleX(1);
+}
+.nav-link-animated:hover,
+.nav-link-animated:focus-visible {
+  color: var(--purple-hover);
+}
+
+.footprints-card {
+  width: 95%;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border-radius: var(--radius-xl);
+  padding: 22px;
+}
+
+.page-title {
+  font-size: 44px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.hint-text {
+  color: #555;
+  font-size: 14px;
+}
+
+.map-shell {
+  height: 520px;
+  border-radius: 18px;
+  overflow: hidden;
+}

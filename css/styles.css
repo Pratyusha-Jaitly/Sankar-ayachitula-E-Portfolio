@@ -3,11 +3,11 @@ html {
 }
 
 body {
-  background: #fbf4ff; /* light lavender like your screenshot */
+  background: black; /* light lavender like your screenshot */
 }
 
 :root {
-  --nav-purple: #5b4aa7; /* adjust if you want a different purple */
+  --nav-purple: white; /* adjust if you want a different purple */
 }
 
 /* Top-right navigation container */
@@ -53,7 +53,7 @@ body {
 /* Optional: slightly darken text on hover */
 .nav-link-animated:hover,
 .nav-link-animated:focus-visible {
-  color: #4a3c92;
+  color: white;
 }
 
 /* Keyboard accessibility */
