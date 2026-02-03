@@ -13,7 +13,8 @@ function openPhotosModal({ heading, photos }) {
   const modalTitle = document.getElementById("modalTitle");
   const grid = document.getElementById("photosGrid");
   const modalEl = document.getElementById("photosModal");
-
+  
+if (!modalTitle || !grid || !modalEl) return;
   modalTitle.textContent = heading;
   grid.innerHTML = "";
 
@@ -22,18 +23,18 @@ function openPhotosModal({ heading, photos }) {
       '<div class="col-12"><p class="mb-0">No photos added yet.</p></div>';
   } else {
     for (const src of photos) {
-      const col = document.createElement("div");
-      col.className = "col-12 col-md-6";
-      col.innerHTML = `
-        <img
-          src="${src}"
-          alt="Footprint photo"
-          class="img-fluid rounded-3"
-          loading="lazy"
-        />
-      `;
-      grid.appendChild(col);
-    }
+  const col = document.createElement("div");
+  col.className = "col-12 col-md-6";
+
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = "Footprint photo";
+  img.className = "img-fluid rounded-3";
+  img.loading = "lazy";
+
+  col.appendChild(img);
+  grid.appendChild(col);
+}
   }
 
   // ✅ Reuse a single modal instance (prevents stuck backdrop)
